@@ -22,7 +22,7 @@ the limitations of the previous one.
     **drawback**: is active only for that particular Controller.
     
 # definition
-A controller advice allows you to use exactly the similar exception handling 
+A controller advice allows you to use similar exception handling 
 techniques to `@ExceptionHandler` but apply them across the whole application, 
 not just to an individual controller. You can think of them as an annotation 
 driven interceptor.
