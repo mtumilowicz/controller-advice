@@ -18,16 +18,16 @@ import static java.util.Objects.nonNull;
  * Created by mtumilowicz on 2018-07-25.
  */
 @ControllerAdvice
-public class EntityNotFoundExceptionInterceptor {
-    
+class EntityNotFoundExceptionInterceptor {
+
     @ResponseStatus(code = HttpStatus.NOT_FOUND)
     @ExceptionHandler(EntityNotFoundException.class)
     @ResponseBody
-    public ApplicationExceptionAsJSON entityNotFoundException(@NonNull HttpServletRequest request, 
-                                                              @NonNull EntityNotFoundException ex) {
+    ApplicationExceptionAsJSON entityNotFoundException(@NonNull HttpServletRequest request,
+                                                       @NonNull EntityNotFoundException ex) {
         Preconditions.checkArgument(nonNull(request.getRequestURI()));
         Preconditions.checkArgument(nonNull(ex.getLocalizedMessage()));
-        
+
         return ApplicationExceptionAsJSON.builder()
                 .url(request.getRequestURI())
                 .message(ex.getLocalizedMessage())
