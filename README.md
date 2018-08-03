@@ -6,7 +6,7 @@ Before `Spring 3.2`, the main approach to handling exceptions in a
 `Spring MVC` application was `@ExceptionHandler` annotation.
 
 After `3.2` we now have the new `@ControllerAdvice` annotation to address 
-the limitations of the previous two solutions.
+the limitations of the previous one.
 
 * `@ExceptionHandler`
     ```
