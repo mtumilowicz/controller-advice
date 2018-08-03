@@ -1,6 +1,9 @@
 # controller-advice
 Exploring basic features of exception handling in Spring (`@ControllerAdvice`).
 
+_Reference_: https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/ControllerAdvice.html  
+_Reference_: https://spring.io/blog/2013/11/01/exception-handling-in-spring-mvc  
+_reference_: http://www.baeldung.com/exception-handling-for-rest-with-spring
 # preface
 Before `Spring 3.2`, the main approach to handling exceptions in a 
 `Spring MVC` application was `@ExceptionHandler` annotation.
