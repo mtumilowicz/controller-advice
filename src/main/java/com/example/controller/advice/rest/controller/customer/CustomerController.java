@@ -8,6 +8,7 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -15,17 +16,18 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @AllArgsConstructor
+@RequestMapping("customers")
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class CustomerController {
 
     CustomerService service;
 
-    @GetMapping("customers/{id}")
+    @GetMapping("{id}")
     public ResponseEntity<Customer> findById(@PathVariable("id") Integer id) {
         return ResponseEntity.ok(service.findById(id));
     }
 
-    @GetMapping("customers/health")
+    @GetMapping("health")
     public void health() {
 
     }
