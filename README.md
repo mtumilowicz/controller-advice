@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/mtumilowicz/controller-advice.svg?branch=master)](https://travis-ci.com/mtumilowicz/controller-advice)
+
 # controller-advice
 Exploring basic features of exception handling in Spring (`@ControllerAdvice`).
 
